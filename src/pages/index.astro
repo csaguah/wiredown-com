@@ -1,17 +1,565 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Wire Down — Calma tu sistema nervioso y sana tu cuerpo"
+  description="El método somático para llevar tu sistema nervioso de vuelta a la calma. Descubre en qué estado está tu cuerpo con el test gratuito."
+>
+  <!-- TOPBAR -->
+  <div class="topbar">
+    🌿 Wire Down · Un método para volver a la calma desde el cuerpo
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">Wire Down · Regulación del sistema nervioso</p>
+      <h1>Cansada aunque dormiste.<br />Tensa sin saber por qué.</h1>
+      <p class="hero-claim">Tu cuerpo no está fallando — está pidiendo calma.</p>
+      <p class="hero-sub">
+        Si te levantas con el cuello duro, la mente acelerada y un agotamiento que
+        el descanso no repara, no es falta de voluntad ni es "tu edad".
+        Es tu cuerpo viviendo en alerta. Y puede reaprender a soltar.
+      </p>
+
+      <a href="/test/" class="btn-primary" id="cta-hero" data-cta="hero_test">
+        Descubre en qué estado está tu cuerpo →
+      </a>
+
+      <p class="hero-guarantee">
+        <span>✓ Test gratuito</span> &nbsp;·&nbsp;
+        <span>✓ 2 minutos</span> &nbsp;·&nbsp;
+        <span>✓ Sin registro para empezar</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- MIRROR / PAIN -->
+  <section class="pain">
+    <div class="container">
+      <h2>¿Te reconoces en alguna de estas frases?</h2>
+      <p class="pain-intro">
+        Si dijiste "sí" a más de una, tu cuerpo lleva tiempo enviándote señales.
+      </p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="icon">😴</div>
+          <strong>«Me despierto cansada aunque dormí»</strong>
+          Tu cuerpo no descansó de verdad. Pasó la noche en modo alerta.
+        </div>
+        <div class="pain-card">
+          <div class="icon">😤</div>
+          <strong>«Tengo el cuerpo contracturado y no sé por qué»</strong>
+          No es el músculo el que falla. Es el sistema nervioso que lleva tenso años.
+        </div>
+        <div class="pain-card">
+          <div class="icon">🧠</div>
+          <strong>«Mi mente no para aunque quiero descansar»</strong>
+          El piloto automático del estrés está encendido. Y puedes apagarlo.
+        </div>
+        <div class="pain-card">
+          <div class="icon">⚖️</div>
+          <strong>«Subí de peso sin cambiar mi alimentación»</strong>
+          El cortisol crónico hace exactamente eso. No es falta de voluntad.
+        </div>
+        <div class="pain-card">
+          <div class="icon">💨</div>
+          <strong>«He probado de todo y sigo igual»</strong>
+          Porque nadie trabajó desde la raíz: tu sistema nervioso desregulado.
+        </div>
+        <div class="pain-card">
+          <div class="icon">🔋</div>
+          <strong>«No tengo energía para nada»</strong>
+          Un cuerpo en modo supervivencia consume toda tu energía vital.
+        </div>
+      </div>
+
+      <div class="pain-bridge">
+        <p>Cada cuerpo vive el estrés de una forma distinta. <strong>¿Quieres saber cómo lo vive el tuyo?</strong></p>
+        <a href="/test/" class="btn-secondary" data-cta="pain_test">Hacer el test gratuito →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <div class="container">
+      <p class="quote-text">
+        «Tu cuerpo no está roto. Solo está sobrecargado. Y lo que necesita no es
+        más esfuerzo: son señales de seguridad.»
+      </p>
+      <p class="quote-sub">— Carlos Sagua H. · Wire Down</p>
+    </div>
+  </section>
+
+  <!-- WHAT HAPPENS TO YOUR BODY -->
+  <section class="explain">
+    <div class="container">
+      <h2>Qué le está pasando a tu cuerpo</h2>
+      <p class="explain-lead">
+        Tu sistema nervioso tiene dos modos. Uno te activa frente al peligro —
+        corazón acelerado, músculos tensos, mente alerta. El otro te calma,
+        te repara y te permite descansar de verdad.
+      </p>
+      <p class="explain-lead">
+        El problema del mundo moderno es que el "modo alerta" casi nunca se apaga.
+        El trabajo, las pantallas, las preocupaciones… tu cuerpo reacciona como si
+        hubiera un peligro constante. Y cuando esa alerta no para, aparece lo que ya
+        conoces: dolor sin causa clara, fatiga, insomnio, tensión, irritabilidad.
+      </p>
+      <p class="explain-highlight">
+        No estás imaginando nada. No es debilidad. Es biología.
+        Y la buena noticia es que la biología se puede reentrenar.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHAT IS WIRE DOWN -->
+  <section class="what">
+    <div class="container">
+      <h2>Qué es Wire Down</h2>
+      <p class="what-lead">
+        Wire Down no es relajación genérica ni un consejo más de "respira hondo".
+        Es un <strong>método de intervención</strong>: prácticas simples y validadas
+        por la neurociencia que le envían a tu cuerpo la señal que necesita para salir
+        del modo alerta y volver a la calma.
+      </p>
+      <p class="what-lead">
+        Microintervenciones de 1 a 5 minutos —respiración, movimiento somático,
+        contacto, grounding— que puedes aplicar en el momento justo, según cómo
+        esté tu cuerpo ese día. No requieren equipamiento, ni experiencia, ni horas
+        de tu tiempo. Solo necesitas saber cuál usar y cuándo.
+      </p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="container-wide">
+      <h2>Cómo funciona el método</h2>
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="how-num">1</div>
+          <h3>Entiende</h3>
+          <p>Comprende por qué tu cuerpo reacciona así. Cuando entiendes, dejas de pelear contra ti misma.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">2</div>
+          <h3>Evalúa tu estado</h3>
+          <p>Descubre en qué estado está hoy tu sistema nervioso. Cada perfil necesita algo distinto.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">3</div>
+          <h3>Interviene</h3>
+          <p>Aplica la práctica adecuada para tu estado. La señal de seguridad correcta, en el momento correcto.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">4</div>
+          <h3>Sostén</h3>
+          <p>Conviértelo en hábito. Pequeñas prácticas diarias que reentrenan tu sistema hacia la calma.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- START HERE: TEST -->
+  <section class="start">
+    <div class="container">
+      <h2>Empieza por aquí</h2>
+      <p class="start-sub">
+        Antes de cualquier práctica, necesitas saber en qué estado está tu cuerpo hoy.
+        El test te entrega tu perfil y la primera recomendación, en 2 minutos.
+      </p>
+      <a href="/test/" class="btn-cta-final" data-cta="start_test">
+        Hacer el test gratuito →
+      </a>
+      <p class="start-note">Gratis · Sin compromiso · Resultado inmediato</p>
+    </div>
+  </section>
+
+  <!-- ECOSYSTEM / THE PATH -->
+  <section class="path">
+    <div class="container-wide">
+      <h2>El camino completo</h2>
+      <p class="path-sub">Wire Down te acompaña paso a paso, a tu ritmo.</p>
+      <div class="path-grid">
+        <div class="path-item">
+          <div class="path-icon">🧭</div>
+          <h3>El Test</h3>
+          <p>Tu punto de partida. Identifica el estado de tu sistema nervioso.</p>
+        </div>
+        <div class="path-item">
+          <div class="path-icon">📖</div>
+          <h3>El Ebook</h3>
+          <p>El método completo explicado: la ciencia y todas las prácticas, paso a paso.</p>
+        </div>
+        <div class="path-item">
+          <div class="path-icon">🌿</div>
+          <h3>Calma, tu coach</h3>
+          <p>Un acompañamiento diario que te recuerda y recomienda la práctica adecuada según tu estado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR -->
+  <section class="author">
+    <div class="container">
+      <div class="author-inner">
+        <div class="author-avatar">CS</div>
+        <div>
+          <h3 class="author-name">Carlos Sagua H.</h3>
+          <p class="author-role">Kinesiólogo · Quiropráctico · 20+ años de experiencia clínica · Santiago, Chile</p>
+          <p class="author-bio">
+            A lo largo de más de 20 años acompañando personas con dolor crónico y estrés acumulado,
+            aprendí que el cuerpo no falla: responde. Responde al entorno, a las emociones no expresadas
+            y a un sistema nervioso que lleva demasiado tiempo en alerta.
+            <br /><br />
+            Wire Down nació de esa observación clínica: la regulación nerviosa no requiere años de terapia
+            ni equipamiento costoso. Requiere herramientas simples, constantes y basadas en cómo
+            funciona realmente tu biología.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <strong>Wire Down</strong> · Carlos Sagua H. · Kinesiólogo y Quiropráctico<br />
+    Santiago, Chile · wire-down.com<br /><br />
+    Wire Down es un método educativo de autorregulación. No reemplaza diagnóstico ni tratamiento médico.
+  </footer>
+</BaseLayout>
+
+<style>
+  /* TOPBAR */
+  .topbar {
+    background: var(--verde);
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--sage);
+    padding: 70px 24px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 50%;
+    transform: translateX(-50%);
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: rgba(45,90,61,0.04);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--verde-m);
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: clamp(30px, 5vw, 50px);
+    color: var(--verde);
+    margin-bottom: 14px;
+    max-width: 640px;
+    margin-left: auto; margin-right: auto;
+  }
+  .hero-claim {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: clamp(18px, 2.8vw, 24px);
+    color: var(--osc);
+    margin-bottom: 22px;
+  }
+  .hero-sub {
+    font-size: clamp(15px, 2vw, 17px);
+    color: var(--gris);
+    margin-bottom: 32px;
+    max-width: 540px;
+    margin-left: auto; margin-right: auto;
+    line-height: 1.7;
+  }
+  .hero-guarantee { margin-top: 16px; font-size: 12px; color: var(--gris); }
+  .hero-guarantee span { color: var(--verde-m); font-weight: 600; }
+
+  /* BUTTONS */
+  .btn-primary {
+    display: inline-block;
+    background: var(--verde);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 18px 40px;
+    border-radius: 50px;
+    letter-spacing: 0.3px;
+    transition: background 0.2s, transform 0.15s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary:hover { background: #1e4029; transform: translateY(-2px); }
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--verde);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 30px;
+    border-radius: 50px;
+    border: 1.5px solid var(--verde);
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .btn-secondary:hover { background: var(--sage); }
+
+  /* PAIN */
+  .pain { background: #fff; padding: 70px 24px; }
+  .pain h2 {
+    font-size: clamp(24px, 3.5vw, 34px);
+    color: var(--verde);
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .pain-intro {
+    text-align: center;
+    color: var(--gris);
+    font-size: 15px;
+    margin-bottom: 44px;
+    max-width: 540px;
+    margin-left: auto; margin-right: auto;
+  }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .pain-card {
+    background: var(--sage);
+    border-radius: 14px;
+    padding: 22px 20px;
+    font-size: 14px;
+    color: var(--osc);
+    line-height: 1.55;
+  }
+  .pain-card .icon { font-size: 22px; margin-bottom: 10px; }
+  .pain-card strong {
+    display: block;
+    font-weight: 600;
+    color: var(--verde);
+    margin-bottom: 4px;
+    font-family: 'Lora', serif;
+    font-size: 15px;
+  }
+  .pain-bridge { text-align: center; margin-top: 44px; }
+  .pain-bridge p { font-size: 16px; color: var(--osc); margin-bottom: 20px; }
+
+  /* QUOTE */
+  .quote-section { background: var(--verde); padding: 60px 24px; text-align: center; }
+  .quote-text {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.8vw, 26px);
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto 16px;
+    line-height: 1.5;
+  }
+  .quote-sub { font-size: 13px; color: rgba(255,255,255,0.65); letter-spacing: 0.5px; }
+
+  /* EXPLAIN */
+  .explain { background: var(--beige); padding: 70px 24px; }
+  .explain h2 {
+    font-size: clamp(24px, 3.5vw, 34px);
+    color: var(--verde);
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .explain-lead {
+    font-size: 16px;
+    color: var(--osc);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    max-width: 640px;
+    margin-left: auto; margin-right: auto;
+  }
+  .explain-highlight {
+    font-family: 'Lora', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--verde);
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 12px;
+    max-width: 600px;
+    margin-left: auto; margin-right: auto;
+  }
+
+  /* WHAT */
+  .what { background: #fff; padding: 70px 24px; }
+  .what h2 {
+    font-size: clamp(24px, 3.5vw, 34px);
+    color: var(--verde);
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .what-lead {
+    font-size: 16px;
+    color: var(--osc);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    max-width: 640px;
+    margin-left: auto; margin-right: auto;
+  }
+
+  /* HOW */
+  .how { background: var(--sage); padding: 70px 24px; }
+  .how h2 {
+    font-size: clamp(24px, 3.5vw, 34px);
+    color: var(--verde);
+    text-align: center;
+    margin-bottom: 44px;
+  }
+  .how-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .how-step {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .how-num {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--verde-xl);
+    color: var(--verde);
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px;
+  }
+  .how-step h3 { font-size: 18px; color: var(--verde); margin-bottom: 8px; }
+  .how-step p { font-size: 14px; color: var(--gris); line-height: 1.6; }
+
+  /* START */
+  .start { background: var(--verde); padding: 80px 24px; text-align: center; }
+  .start h2 {
+    font-size: clamp(26px, 4vw, 38px);
+    color: #fff;
+    margin-bottom: 14px;
+  }
+  .start-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 36px;
+    max-width: 480px;
+    margin-left: auto; margin-right: auto;
+    line-height: 1.7;
+  }
+  .btn-cta-final {
+    display: inline-block;
+    background: var(--dorado);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 20px 48px;
+    border-radius: 50px;
+    letter-spacing: 0.3px;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-cta-final:hover { background: #b5943e; transform: translateY(-2px); }
+  .start-note { margin-top: 18px; font-size: 13px; color: rgba(255,255,255,0.6); }
+
+  /* PATH */
+  .path { background: var(--beige); padding: 70px 24px; }
+  .path h2 {
+    font-size: clamp(24px, 3.5vw, 34px);
+    color: var(--verde);
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .path-sub { text-align: center; color: var(--gris); font-size: 15px; margin-bottom: 44px; }
+  .path-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .path-item {
+    background: #fff;
+    border: 1.5px solid var(--sage-d);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .path-icon { font-size: 32px; margin-bottom: 14px; }
+  .path-item h3 { font-size: 18px; color: var(--verde); margin-bottom: 8px; }
+  .path-item p { font-size: 14px; color: var(--gris); line-height: 1.6; }
+
+  /* AUTHOR */
+  .author { background: var(--sage); padding: 70px 24px; }
+  .author-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 36px;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .author-avatar {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    background: var(--verde);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Lora', serif;
+    font-size: 28px; font-weight: 700;
+    color: #fff; flex-shrink: 0;
+  }
+  .author-name { font-family: 'Lora', serif; font-size: 22px; color: var(--verde); margin-bottom: 4px; }
+  .author-role { font-size: 12px; color: var(--gris); margin-bottom: 14px; letter-spacing: 0.3px; }
+  .author-bio { font-size: 14px; color: var(--osc); line-height: 1.7; }
+  @media (max-width: 520px) {
+    .author-inner { flex-direction: column; align-items: center; text-align: center; }
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--osc);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  footer strong { color: rgba(255,255,255,0.8); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero h1, .hero-claim, .hero-sub, .hero .btn-primary {
+    animation: fadeUp 0.7s ease both;
+  }
+  .hero-claim { animation-delay: 0.1s; }
+  .hero-sub { animation-delay: 0.2s; }
+  .hero .btn-primary { animation-delay: 0.3s; }
+</style>

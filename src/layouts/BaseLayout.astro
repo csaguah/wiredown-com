@@ -1,0 +1,119 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const {
+  title,
+  description,
+  image = '/img/og-default.jpg',
+} = Astro.props;
+
+const GTM_ID = import.meta.env.PUBLIC_GTM_ID;
+const PIXEL_ID = import.meta.env.PUBLIC_META_PIXEL_ID;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Consent Mode v2 (defaults DENIED) + GTM -->
+    {GTM_ID && (
+      <>
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied',
+            wait_for_update: 500,
+          });
+        </script>
+        <script is:inline define:vars={{ GTM_ID }}>
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer',GTM_ID);
+        </script>
+      </>
+    )}
+
+    <!-- Meta Pixel -->
+    {PIXEL_ID && (
+      <script is:inline define:vars={{ PIXEL_ID }}>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', PIXEL_ID);
+        fbq('track', 'PageView');
+      </script>
+    )}
+  </head>
+  <body>
+    {GTM_ID && (
+      <noscript set:html={`<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`} />
+    )}
+
+    <slot />
+
+    <style is:global>
+      :root {
+        --verde:    #2D5A3D;
+        --verde-m:  #3D7A50;
+        --verde-l:  #74C69D;
+        --verde-xl: #D8F3DC;
+        --sage:     #D8E4D0;
+        --sage-d:   #C4D4BB;
+        --dorado:   #C8A84B;
+        --dorado-l: #F5EDD0;
+        --tierra:   #8B5E3C;
+        --beige:    #F8F4EE;
+        --gris:     #5A6B5D;
+        --osc:      #1C2B20;
+        --rojo:     #8B2020;
+      }
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body { font-family: 'DM Sans', sans-serif; color: var(--osc); background: #fff; line-height: 1.6; }
+      img { max-width: 100%; display: block; }
+      a { color: inherit; text-decoration: none; }
+      h1, h2, h3, h4 { font-family: 'Lora', serif; line-height: 1.2; }
+      .serif { font-family: 'Lora', serif; }
+      .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+      .container-wide { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+    </style>
+  </body>
+</html>
